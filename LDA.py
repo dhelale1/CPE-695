@@ -23,7 +23,7 @@ def pca(X, Z, components=0):
 		for num in range(a):
 			eigenvec[:,num] = eigenvec[:,num]/np.linalg.norm(eigenvec[:,num])
 	eigenval = np.argsort(-eigenval)
-	eigenvec = eigenvec[:,eigeval]
+	eigenvec = eigenvec[:,eigenval]
 	eigenval = eigenval[0:components]
 	eigenvec = eigenvec[:,0:components]
 	return [eigenval, eigenvec, mean]
